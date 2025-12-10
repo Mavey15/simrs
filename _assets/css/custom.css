@@ -1,0 +1,85 @@
+/* Custom global styles to modernize the UI */
+:root{
+  --primary:#0069d9;
+  --accent:#00b894;
+  --muted:#6c757d;
+  --bg1:linear-gradient(135deg,#f7f9fc 0%, #eef4ff 100%);
+}
+html,body{
+  height:100%;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background:var(--bg1);
+  color:#333;
+}
+/* Wrapper and page spacing */
+#page-content-wrapper{
+  padding:24px;
+}
+/* Sidebar tweaks */
+#sidebar-wrapper{
+  background: linear-gradient(180deg,#09203f 0%, #537895 100%);
+  box-shadow: 2px 0 12px rgba(0,0,0,0.08);
+}
+.sidebar-nav li a{
+  color: rgba(255,255,255,0.92);
+  font-weight:600;
+  padding:12px 20px;
+  border-left:4px solid transparent;
+}
+.sidebar-nav li.active > a,
+.sidebar-nav li a:hover{
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+  border-left-color: rgba(255,255,255,0.18);
+}
+.sidebar-nav > .sidebar-brand a{
+  color:#fff;
+  font-size:20px;
+  padding-left:18px;
+}
+/* Menu toggle button */
+#menu-toggle{
+  background:transparent;
+  border:1px solid rgba(0,0,0,0.05);
+  box-shadow:0 1px 2px rgba(0,0,0,0.04);
+  color:var(--primary);
+}
+/* Cards for content */
+.card-style{
+  background:#fff;
+  border-radius:10px;
+  padding:18px;
+  box-shadow:0 6px 18px rgba(15,15,15,0.06);
+  margin-bottom:18px;
+}
+/* Table improvements */
+table.dataTable thead th{
+  background: linear-gradient(90deg, rgba(0,105,217,0.08), rgba(0,185,148,0.02));
+  color: #222;
+  font-weight:700;
+}
+table.dataTable tbody tr:nth-child(odd){
+  background: #fbfdff;
+}
+/* Primary buttons */
+.btn-primary{
+  background:var(--primary);
+  border-color:var(--primary);
+  color:#fff;
+  box-shadow:0 6px 12px rgba(0,105,217,0.12);
+}
+.btn-default{
+  background:#fff;
+  border:1px solid rgba(0,0,0,0.06);
+  color:var(--muted);
+}
+/* Responsive tweaks */
+@media (max-width:767px){
+  #sidebar-wrapper{background: #0b3b59}
+  #menu-toggle{display:inline-block}
+}
+/* Small utility */
+.text-muted-2{color:var(--muted)}
+
+/* Add subtle transition for links and buttons */
+a, button{transition:all .18s ease}
